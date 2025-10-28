@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float airFriction = 10f;
     
     [SerializeField] float jumpForce = 18.5f;
+    [SerializeField] float minJumpForce = 5f;
     [SerializeField] float gravityScale = 5f;
     [SerializeField] float fallGravityScale = 8f;
     
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     }
     [SerializeField] float jumpBufferTime = 0.1f;
     Coroutine _jumpBufferTimer;
+    bool _jumpJustReleased;
 
     public float MoveInput { get; private set; }
 
@@ -67,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveInput = _moveAction.ReadValue<float>();
 
+        if (_jumpAction.WasReleasedThisFrame())
+        {
+            _jumpJustReleased = true;
+        }
+
         if (JumpBuffered) return;
         JumpBuffered = _jumpAction.WasPressedThisFrame();
         _jumpBufferTimer = StartCoroutine(JumpBufferTimer());
@@ -77,30 +84,8 @@ public class PlayerMovement : MonoBehaviour
         IsOnGround = feetCollider.IsTouching(_groundContactFilter);
 
         SetHorizontalSpeed();
-        
-        // If on ground and either on it or at the end of falling onto it
-        // Small value for comparison because for some reason velY is not zero when moving horizontally
-        if (IsOnGround && _rb.linearVelocityY <= 0.001)
-        {
-            _canJump = true;
-        }
 
-        bool walkedOffGround = _wasOnGround && !IsOnGround && _rb.linearVelocityY <= 0;
-        if (walkedOffGround)
-        {
-            _canJump = false;
-        }
-
-        if (JumpBuffered)
-        {
-            if (_canJump)
-            {
-                Jump();
-                JumpBuffered = false;
-            }
-        }
-
-        _rb.gravityScale = _rb.linearVelocityY < 0 ? fallGravityScale : gravityScale;
+        SetVerticalSpeed();
 
         _wasOnGround = IsOnGround;
     }
@@ -154,6 +139,42 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.linearVelocity += _currentMovingPlatform.Velocity;
         }
+    }
+
+    void SetVerticalSpeed()
+    {
+        // If on ground and either on it or at the end of falling onto it
+        // Small value for comparison because for some reason velY is not zero when moving horizontally
+        if (IsOnGround && _rb.linearVelocityY <= 0.001)
+        {
+            _canJump = true;
+        }
+
+        bool walkedOffGround = _wasOnGround && !IsOnGround && _rb.linearVelocityY <= 0;
+        if (walkedOffGround)
+        {
+            _canJump = false;
+        }
+
+        if (JumpBuffered)
+        {
+            if (_canJump)
+            {
+                Jump();
+                JumpBuffered = false;
+            }
+        }
+
+        if (_jumpJustReleased)
+        {
+            if (_rb.linearVelocityY > minJumpForce)
+            {
+                _rb.linearVelocityY = minJumpForce;
+            }
+            _jumpJustReleased = false;
+        }
+
+        _rb.gravityScale = _rb.linearVelocityY < 0 ? fallGravityScale : gravityScale;
     }
 
     void Jump()
