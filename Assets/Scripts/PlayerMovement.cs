@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,13 +6,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
+    public float moveSpeed = 6f;
+    public float jumpForce = 18f;
+    public float gravityScale = 5f;
+    public float fallGravityScale = 8f;
     
     public LayerMask groundLayerMask;
 
-    public int maxJumps = 2;
-    int _jumpsAvailable;
+    bool _canJump;
 
     bool _wasOnGround = true;
     bool _isOnGround = true;
@@ -19,8 +21,23 @@ public class PlayerMovement : MonoBehaviour
     InputAction _moveAction;
     InputAction _jumpAction;
 
+    bool _jumpBuffered;
+    bool JumpBuffered
+    {
+        get => _jumpBuffered;
+        set
+        {
+            if (!value && _jumpBufferTimer != null)
+            {
+                StopCoroutine(_jumpBufferTimer);
+            }
+            _jumpBuffered = value;
+        }
+    }
+    public float jumpBufferTime = 0.1f;
+    Coroutine _jumpBufferTimer;
+
     float _moveInput;
-    bool _jumpInput;
     
     MovingPlatform _currentMovingPlatform;
 
@@ -43,17 +60,16 @@ public class PlayerMovement : MonoBehaviour
 
         _moveAction = InputSystem.actions.FindAction("Player/Move");
         _jumpAction = InputSystem.actions.FindAction("Player/Jump");
-        
-        _jumpsAvailable = maxJumps;
     }
 
     void Update()
     {
         _moveInput = _moveAction.ReadValue<Vector2>().x;
 
-        if (!_jumpInput)
+        if (!JumpBuffered)
         {
-            _jumpInput = _jumpAction.WasPressedThisFrame();
+            JumpBuffered = _jumpAction.WasPressedThisFrame();
+            _jumpBufferTimer = StartCoroutine(JumpBufferTimer());
         }
         
         SetAnimation(_moveInput);
@@ -68,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         // Small value for comparison because for some reason velY is not zero when moving horizontally
         if (_isOnGround && _rb.linearVelocityY <= 0.001)
         {
-            _jumpsAvailable = maxJumps;
+            _canJump = true;
         }
 
         if (_currentMovingPlatform)
@@ -79,17 +95,19 @@ public class PlayerMovement : MonoBehaviour
         bool walkedOffGround = _wasOnGround && !_isOnGround && _rb.linearVelocityY <= 0;
         if (walkedOffGround)
         {
-            _jumpsAvailable--;
+            _canJump = false;
         }
 
-        if (_jumpInput)
+        if (JumpBuffered)
         {
-            if (_jumpsAvailable > 0)
+            if (_canJump)
             {
                 Jump();
+                JumpBuffered = false;
             }
-            _jumpInput = false;
         }
+
+        _rb.gravityScale = _rb.linearVelocityY < 0 ? fallGravityScale : gravityScale;
 
         _wasOnGround = _isOnGround;
     }
@@ -122,7 +140,13 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         _rb.linearVelocityY = jumpForce;
-        _jumpsAvailable--;
+        _canJump = false;
+    }
+
+    IEnumerator JumpBufferTimer()
+    {
+        yield return new WaitForSeconds(jumpBufferTime);
+        _jumpBuffered = false;
     }
 
     void SetAnimation(float moveInput)
