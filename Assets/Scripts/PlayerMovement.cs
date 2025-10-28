@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     MovingPlatform _currentMovingPlatform;
 
     Rigidbody2D _rb;
-    Collider2D _collider;
+    [SerializeField] Collider2D feetCollider;
     
     ContactFilter2D _groundContactFilter;
     [SerializeField, Range(0, 89)] float maxGroundSlopeAngle = 80f;
@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<Collider2D>();
         
         ConfigGroundContactFilter();
 
@@ -75,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        IsOnGround = _collider.IsTouching(_groundContactFilter);
+        IsOnGround = feetCollider.IsTouching(_groundContactFilter);
 
         SetHorizontalSpeed();
         
