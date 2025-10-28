@@ -779,8 +779,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bca4e66d0dc684497ffe726afe7c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 6
-  jumpForce: 18
+  maxSpeed: 9
+  groundAccel: 60
+  airAccel: 30
+  groundFriction: 40
+  airFriction: 20
+  jumpForce: 18.5
   gravityScale: 5
   fallGravityScale: 8
   groundLayerMask:
@@ -935,10 +939,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.15281792
-    y: 0.10706482
-    width: 0.6936416
-    height: 0.7865987
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

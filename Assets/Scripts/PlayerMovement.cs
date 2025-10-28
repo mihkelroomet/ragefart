@@ -6,12 +6,17 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 6f;
-    public float jumpForce = 18f;
-    public float gravityScale = 5f;
-    public float fallGravityScale = 8f;
+    [SerializeField] float maxSpeed = 9f;
+    [SerializeField] float groundAccel = 60f;
+    [SerializeField] float airAccel = 30f;
+    [SerializeField] float groundFriction = 40f;
+    [SerializeField] float airFriction = 10f;
     
-    public LayerMask groundLayerMask;
+    [SerializeField] float jumpForce = 18.5f;
+    [SerializeField] float gravityScale = 5f;
+    [SerializeField] float fallGravityScale = 8f;
+    
+    [SerializeField] LayerMask groundLayerMask;
 
     bool _canJump;
 
@@ -34,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             _jumpBuffered = value;
         }
     }
-    public float jumpBufferTime = 0.1f;
+    [SerializeField] float jumpBufferTime = 0.1f;
     Coroutine _jumpBufferTimer;
 
     float _moveInput;
@@ -78,7 +83,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         _isOnGround = _collider.IsTouching(_groundContactFilter);
-        _rb.linearVelocityX = _moveInput * moveSpeed;
+
+        SetHorizontalSpeed();
         
         // If on ground and either on it or at the end of falling onto it
         // Small value for comparison because for some reason velY is not zero when moving horizontally
@@ -135,6 +141,27 @@ public class PlayerMovement : MonoBehaviour
         _groundContactFilter.useNormalAngle = true;
         _groundContactFilter.minNormalAngle = 90f - maxGroundSlopeAngle; // 0°=right, 90°=up
         _groundContactFilter.maxNormalAngle = 90f + maxGroundSlopeAngle;
+    }
+
+    void SetHorizontalSpeed()
+    {
+        float currentVelX = _rb.linearVelocityX;
+        float targetSpeed = _moveInput * maxSpeed;
+        float accel = _isOnGround ? groundAccel : airAccel;
+        float friction = _isOnGround ? groundFriction : airFriction;
+
+        float newVelX;
+        // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
+        if (Mathf.Abs(_moveInput) > 0.01f) // if speeding up
+        {
+            newVelX = Mathf.MoveTowards(currentVelX, targetSpeed, accel * Time.fixedDeltaTime);
+        }
+        else // if slowing down
+        {
+            newVelX = Mathf.MoveTowards(currentVelX, 0, friction * Time.fixedDeltaTime);
+        }
+        
+        _rb.linearVelocityX = newVelX;
     }
 
     void Jump()
