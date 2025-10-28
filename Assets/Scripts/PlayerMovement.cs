@@ -86,11 +86,6 @@ public class PlayerMovement : MonoBehaviour
             _canJump = true;
         }
 
-        if (_currentMovingPlatform)
-        {
-            _rb.linearVelocity += _currentMovingPlatform.Velocity;
-        }
-
         bool walkedOffGround = _wasOnGround && !IsOnGround && _rb.linearVelocityY <= 0;
         if (walkedOffGround)
         {
@@ -155,10 +150,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
         _rb.linearVelocityX = newVelX;
-        print("target speed: " + targetSpeed);
-        print("on ground: " + IsOnGround);
-        print("move input: " + MoveInput);
-        print("hor vel set to " + newVelX);
+
+        if (_currentMovingPlatform)
+        {
+            _rb.linearVelocity += _currentMovingPlatform.Velocity;
+        }
     }
 
     void Jump()
