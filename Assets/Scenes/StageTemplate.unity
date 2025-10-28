@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 181226768}
   - component: {fileID: 181226767}
   - component: {fileID: 181226769}
+  - component: {fileID: 181226770}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -792,6 +793,18 @@ MonoBehaviour:
     m_Bits: 8
   jumpBufferTime: 0.1
   maxGroundSlopeAngle: 80
+--- !u!114 &181226770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181226763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b14b4fc8b772014fa55f96a0b0dc7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
 --- !u!1 &489048514
 GameObject:
   m_ObjectHideFlags: 0

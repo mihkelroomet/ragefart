@@ -21,7 +21,8 @@ public class PlayerMovement : MonoBehaviour
     bool _canJump;
 
     bool _wasOnGround = true;
-    bool _isOnGround = true;
+    public bool IsOnGround { get; private set; } = true;
+
 
     InputAction _moveAction;
     InputAction _jumpAction;
@@ -42,53 +43,45 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpBufferTime = 0.1f;
     Coroutine _jumpBufferTimer;
 
-    float _moveInput;
-    
+    public float MoveInput { get; private set; }
+
     MovingPlatform _currentMovingPlatform;
 
-    SpriteRenderer _sr;
     Rigidbody2D _rb;
     Collider2D _collider;
-    Animator _animator;
     
     ContactFilter2D _groundContactFilter;
     [SerializeField, Range(0, 89)] float maxGroundSlopeAngle = 80f;
     
     void Start()
     {
-        _sr = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
-        _animator = GetComponent<Animator>();
         
         ConfigGroundContactFilter();
 
-        _moveAction = InputSystem.actions.FindAction("Player/Move");
+        _moveAction = InputSystem.actions.FindAction("Player/MoveX");
         _jumpAction = InputSystem.actions.FindAction("Player/Jump");
     }
 
     void Update()
     {
-        _moveInput = _moveAction.ReadValue<Vector2>().x;
+        MoveInput = _moveAction.ReadValue<float>();
 
-        if (!JumpBuffered)
-        {
-            JumpBuffered = _jumpAction.WasPressedThisFrame();
-            _jumpBufferTimer = StartCoroutine(JumpBufferTimer());
-        }
-        
-        SetAnimation(_moveInput);
+        if (JumpBuffered) return;
+        JumpBuffered = _jumpAction.WasPressedThisFrame();
+        _jumpBufferTimer = StartCoroutine(JumpBufferTimer());
     }
 
     void FixedUpdate()
     {
-        _isOnGround = _collider.IsTouching(_groundContactFilter);
+        IsOnGround = _collider.IsTouching(_groundContactFilter);
 
         SetHorizontalSpeed();
         
         // If on ground and either on it or at the end of falling onto it
         // Small value for comparison because for some reason velY is not zero when moving horizontally
-        if (_isOnGround && _rb.linearVelocityY <= 0.001)
+        if (IsOnGround && _rb.linearVelocityY <= 0.001)
         {
             _canJump = true;
         }
@@ -98,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
             _rb.linearVelocity += _currentMovingPlatform.Velocity;
         }
 
-        bool walkedOffGround = _wasOnGround && !_isOnGround && _rb.linearVelocityY <= 0;
+        bool walkedOffGround = _wasOnGround && !IsOnGround && _rb.linearVelocityY <= 0;
         if (walkedOffGround)
         {
             _canJump = false;
@@ -115,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
 
         _rb.gravityScale = _rb.linearVelocityY < 0 ? fallGravityScale : gravityScale;
 
-        _wasOnGround = _isOnGround;
+        _wasOnGround = IsOnGround;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -146,13 +139,13 @@ public class PlayerMovement : MonoBehaviour
     void SetHorizontalSpeed()
     {
         float currentVelX = _rb.linearVelocityX;
-        float targetSpeed = _moveInput * maxSpeed;
-        float accel = _isOnGround ? groundAccel : airAccel;
-        float friction = _isOnGround ? groundFriction : airFriction;
+        float targetSpeed = MoveInput * maxSpeed;
+        float accel = IsOnGround ? groundAccel : airAccel;
+        float friction = IsOnGround ? groundFriction : airFriction;
 
         float newVelX;
         // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
-        if (Mathf.Abs(_moveInput) > 0.01f) // if speeding up
+        if (Mathf.Abs(MoveInput) > 0.01f) // if speeding up
         {
             newVelX = Mathf.MoveTowards(currentVelX, targetSpeed, accel * Time.fixedDeltaTime);
         }
@@ -162,6 +155,10 @@ public class PlayerMovement : MonoBehaviour
         }
         
         _rb.linearVelocityX = newVelX;
+        print("target speed: " + targetSpeed);
+        print("on ground: " + IsOnGround);
+        print("move input: " + MoveInput);
+        print("hor vel set to " + newVelX);
     }
 
     void Jump()
@@ -174,26 +171,5 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(jumpBufferTime);
         _jumpBuffered = false;
-    }
-
-    void SetAnimation(float moveInput)
-    {
-        if (moveInput != 0)
-        {
-            _sr.flipX = moveInput < 0;
-        }
-        
-        string animationName;
-            
-        if (_isOnGround)
-        {
-            animationName = moveInput == 0 ? "Player_Idle" : "Player_Run";
-        }
-        else
-        {
-            animationName = _rb.linearVelocityY > 0 ? "Player_Jump" : "Player_Fall";
-        }
-        
-        _animator.Play(animationName);
     }
 }
