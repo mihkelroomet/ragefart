@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9201307344263505263}
   - component: {fileID: 6968314205411483787}
   - component: {fileID: 6015898101353053166}
+  - component: {fileID: 8911299271719440489}
   m_Layer: 5
   m_Name: RoundResultImage
   m_TagString: Untagged
@@ -75,3 +76,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8911299271719440489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366259468439492668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bb7fbc065ca004391988d89d7b5d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundResultImage
+  futureRoundImage: {fileID: 4664090971797312321, guid: d13eb82c495ccd8488b8106c3c9c95e2, type: 3}
+  currentRoundImage: {fileID: 5630041214470644983, guid: d13eb82c495ccd8488b8106c3c9c95e2, type: 3}
+  lostRoundImage: {fileID: 8251589848639942348, guid: d13eb82c495ccd8488b8106c3c9c95e2, type: 3}
+  wonRoundImage: {fileID: 8802912214087507242, guid: d13eb82c495ccd8488b8106c3c9c95e2, type: 3}
