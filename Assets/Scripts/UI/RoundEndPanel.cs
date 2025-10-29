@@ -3,33 +3,18 @@ using UnityEngine.UI;
 
 public class RoundEndPanel : MonoBehaviour
 {
-    [SerializeField] WinEvent winEvent;
-    [SerializeField] LoseEvent loseEvent;
-    
     [SerializeField] Sprite winImage;
     [SerializeField] Sprite loseImage;
 
-    [SerializeField] Image RoundResultTitleImage;
-    
-    void OnEnable()
+    [SerializeField] Image roundResultTitleImage;
+
+    public void OnWin()
     {
-        winEvent.OnEvent += OnWin;
-        loseEvent.OnEvent += OnLose;
+        roundResultTitleImage.sprite = winImage;
     }
 
-    void OnDisable()
+    public void OnLose()
     {
-        winEvent.OnEvent -= OnWin;
-        loseEvent.OnEvent -= OnLose;
-    }
-
-    void OnWin(Events.Win _)
-    {
-        RoundResultTitleImage.sprite = winImage;
-    }
-
-    void OnLose(Events.Lose _)
-    {
-        RoundResultTitleImage.sprite = loseImage;
+        roundResultTitleImage.sprite = loseImage;
     }
 }

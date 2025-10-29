@@ -5,7 +5,7 @@ public class IGCanvas : MonoBehaviour
     [SerializeField] WinEvent winEvent;
     [SerializeField] LoseEvent loseEvent;
     
-    [SerializeField] RectTransform roundEndPanel;
+    [SerializeField] RoundEndPanel roundEndPanel;
 
     void OnEnable()
     {
@@ -21,11 +21,13 @@ public class IGCanvas : MonoBehaviour
 
     void OnWin(Events.Win _)
     {
+        roundEndPanel.OnWin();
         roundEndPanel.gameObject.SetActive(true);
     }
 
     void OnLose(Events.Lose _)
     {
+        roundEndPanel.OnLose();
         roundEndPanel.gameObject.SetActive(true);
     }
 }

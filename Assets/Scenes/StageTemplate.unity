@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 102189630}
   - component: {fileID: 102189629}
   - component: {fileID: 102189628}
+  - component: {fileID: 102189631}
   m_Layer: 0
   m_Name: TilemapBrush
   m_TagString: Untagged
@@ -352,6 +353,66 @@ Tilemap:
   m_GameObject: {fileID: 102189626}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -9, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 2
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 8, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -9, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 2
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 8, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -9, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 2
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 8, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -534,10 +595,10 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 18
+  - m_RefCount: 24
     m_Data: {fileID: 11400000, guid: 978e6506b712ba34da9d4115b972ae72, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 18
+  - m_RefCount: 24
     m_Data: {fileID: 21300000, guid: db62152ad86ca4d41885f4cbba72e12d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 18
@@ -558,8 +619,44 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 3
+    m_Data:
+      e00: 0
+      e01: 1
+      e02: 0
+      e03: 0
+      e10: -1
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - m_RefCount: 3
+    m_Data:
+      e00: 0
+      e01: -1
+      e02: 0
+      e03: 0
+      e10: 1
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
-  - m_RefCount: 18
+  - m_RefCount: 24
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -585,6 +682,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &102189631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102189626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb3df0c7c0f8114d99d5ff8b65ae65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToiletBrush
+  loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
 --- !u!1 &126117362
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IGCanvas
   winEvent: {fileID: 11400000, guid: 58c931117caf7b04388936f17ec412da, type: 2}
   loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
-  roundEndPanel: {fileID: 611476932}
+  roundEndPanel: {fileID: 611476935}
 --- !u!1 &181226763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,11 +2243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba848638c222134ea7b5dac461496b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundEndPanel
-  winEvent: {fileID: 11400000, guid: 58c931117caf7b04388936f17ec412da, type: 2}
-  loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
   winImage: {fileID: 21300000, guid: e3294e64645c98643a19d1322884b38d, type: 3}
   loseImage: {fileID: 21300000, guid: 1b8fad43282bf66429560521ee17d2df, type: 3}
-  RoundResultTitleImage: {fileID: 633592433}
+  roundResultTitleImage: {fileID: 633592433}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
