@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class IGCanvas : MonoBehaviour
+public class RoundEndPanel : MonoBehaviour
 {
     [SerializeField] WinEvent winEvent;
     [SerializeField] LoseEvent loseEvent;
     
-    [SerializeField] RectTransform roundEndPanel;
+    [SerializeField] Sprite winImage;
+    [SerializeField] Sprite loseImage;
 
+    [SerializeField] Image RoundResultTitleImage;
+    
     void OnEnable()
     {
         winEvent.OnEvent += OnWin;
@@ -21,11 +25,11 @@ public class IGCanvas : MonoBehaviour
 
     void OnWin(Events.Win _)
     {
-        roundEndPanel.gameObject.SetActive(true);
+        RoundResultTitleImage.sprite = winImage;
     }
 
     void OnLose(Events.Lose _)
     {
-        roundEndPanel.gameObject.SetActive(true);
+        RoundResultTitleImage.sprite = loseImage;
     }
 }

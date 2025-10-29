@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: 1b8fad43282bf66429560521ee17d2df
+guid: d13eb82c495ccd8488b8106c3c9c95e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8063888842709871850
-    second: you_lose_0
+      213: 4664090971797312321
+    second: round_indicators_0
   - first:
-      213: -5621040601868819271
-    second: you_lose_1
+      213: 5630041214470644983
+    second: round_indicators_1
   - first:
-      213: 7394810505245236594
-    second: you_lose_2
+      213: 8251589848639942348
+    second: round_indicators_2
   - first:
-      213: 4577630899573859579
-    second: you_lose_3
-  - first:
-      213: -6188108849538993046
-    second: you_lose_4
-  - first:
-      213: 1097572449852709097
-    second: you_lose_5
-  - first:
-      213: 5622398130906320642
-    second: you_lose_6
-  - first:
-      213: -7233637667204398560
-    second: you_lose_7
-  - first:
-      213: -6926113540412342305
-    second: you_lose_8
+      213: 8802912214087507242
+    second: round_indicators_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,13 +55,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 1, y: 18, z: 2, w: 13}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -137,145 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: you_lose_0
+      name: round_indicators_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
-        width: 24
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aec25f99d20b8ef60800000000000000
-      internalID: 8063888842709871850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_1
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 21
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b4af89aa5d0ef1b0800000000000000
-      internalID: -5621040601868819271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_2
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 20
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27d1872a9f4af9660800000000000000
-      internalID: 7394810505245236594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_3
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 18
-        width: 30
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf4a3f1cc03078f30800000000000000
-      internalID: 4577630899573859579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_4
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 22
-        width: 19
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a64f6cf89cb6f1aa0800000000000000
-      internalID: -6188108849538993046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_5
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 23
-        width: 12
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e8d9b4f35c5b3f00800000000000000
-      internalID: 1097572449852709097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: you_lose_6
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 18
+        y: 0
         width: 16
-        height: 24
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20fcd72bf45c60e40800000000000000
-      internalID: 5622398130906320642
+      spriteID: 143d516070e2ab040800000000000000
+      internalID: 4664090971797312321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: you_lose_7
+      name: round_indicators_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 30
-        width: 15
-        height: 38
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 022856cfdd4fc9b90800000000000000
-      internalID: -7233637667204398560
+      spriteID: 7f4e453c7ace12e40800000000000000
+      internalID: 5630041214470644983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: you_lose_8
+      name: round_indicators_2
       rect:
         serializedVersion: 2
-        x: 151
-        y: 17
-        width: 6
-        height: 6
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdff2bd5e6081ef90800000000000000
-      internalID: -6926113540412342305
+      spriteID: cce2760af39838270800000000000000
+      internalID: 8251589848639942348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round_indicators_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d12a5d40a3a2a70800000000000000
+      internalID: 8802912214087507242
       vertices: []
       indices: 
       edges: []
@@ -338,8 +213,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 1a035668f78b55f4dbbb21173cdd47ac
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -348,15 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      you_lose_0: 8063888842709871850
-      you_lose_1: -5621040601868819271
-      you_lose_2: 7394810505245236594
-      you_lose_3: 4577630899573859579
-      you_lose_4: -6188108849538993046
-      you_lose_5: 1097572449852709097
-      you_lose_6: 5622398130906320642
-      you_lose_7: -7233637667204398560
-      you_lose_8: -6926113540412342305
+      round_indicators_0: 4664090971797312321
+      round_indicators_1: 5630041214470644983
+      round_indicators_2: 8251589848639942348
+      round_indicators_3: 8802912214087507242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
