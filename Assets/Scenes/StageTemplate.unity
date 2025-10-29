@@ -970,14 +970,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201307344263505263, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 9201307344263505263, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 9201307344263505263, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1087,7 +1079,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 480, y: 270}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1107,7 +1099,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1154,6 +1146,7 @@ MonoBehaviour:
   winEvent: {fileID: 11400000, guid: 58c931117caf7b04388936f17ec412da, type: 2}
   loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
   roundEndPanel: {fileID: 611476935}
+  roundResultsPanel: {fileID: 663048826}
 --- !u!1 &181226763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,10 +2187,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.16315788
-    y: 0.16037735
-    width: 0.6736842
-    height: 0.6792453
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2392,7 +2385,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 387235456}
   m_Father: {fileID: 170570529}
@@ -3083,6 +3076,7 @@ GameObject:
   - component: {fileID: 663048825}
   - component: {fileID: 663048824}
   - component: {fileID: 663048823}
+  - component: {fileID: 663048826}
   m_Layer: 5
   m_Name: RoundResultsPanel
   m_TagString: Untagged
@@ -3100,7 +3094,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2004799472}
   - {fileID: 875932143}
@@ -3116,8 +3110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -256, y: -102}
-  m_SizeDelta: {x: 246, y: 24}
+  m_AnchoredPosition: {x: -120, y: -27}
+  m_SizeDelta: {x: 240, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663048823
 MonoBehaviour:
@@ -3158,7 +3152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.8}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9098039}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3183,6 +3177,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663048821}
   m_CullTransparentMesh: 1
+--- !u!114 &663048826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663048821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9ce533ae86d3244b6f71eec80c9311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundResultsPanel
 --- !u!1001 &674259482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6714,6 +6720,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8251589848639942348, guid: d13eb82c495ccd8488b8106c3c9c95e2, type: 3}
+    - target: {fileID: 6015898101353053166, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9201307344263505263, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
