@@ -33,4 +33,9 @@ public class IGCanvas : MonoBehaviour
         roundResultsPanel.gameObject.SetActive(false);
         roundEndPanel.gameObject.SetActive(true);
     }
+
+    void OnAbandonButtonClicked()
+    {
+        
+    }
 }

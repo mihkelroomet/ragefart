@@ -4994,10 +4994,6 @@ PrefabInstance:
       propertyPath: m_PixelsPerUnitMultiplier
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7886671482738829205, guid: 7bfa903ceafce544bb5884d466ea57d9, type: 3}
-      propertyPath: m_text
-      value: Abandon
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
