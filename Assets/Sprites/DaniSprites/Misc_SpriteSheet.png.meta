@@ -1,0 +1,398 @@
+fileFormatVersion: 2
+guid: 715deff2aa7abc941a46cedb177aef30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -525059357494634272
+    second: Misc_SpriteSheet_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 904
+        width: 119
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5041355, y: 0.06156949}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e89986db4d96b8f0800000000000000
+      internalID: -525059357494634272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 243
+        height: 133
+      alignment: 9
+      pivot: {x: 0.46250796, y: 0.008558597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1454f819ca3f8ac4e8751bca59033e92
+      internalID: -1123297390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 872
+        width: 226
+        height: 152
+      alignment: 9
+      pivot: {x: 0.55876106, y: 0.22333446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def871fcff3a77b4785ee0f2a8ead3c4
+      internalID: 1063655215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 498
+        width: 103
+        height: 151
+      alignment: 9
+      pivot: {x: 0.45790374, y: 0.14413431}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125fd164071debf46b756ff8b0da1d7c
+      internalID: -709617976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 422
+        width: 181
+        height: 69
+      alignment: 9
+      pivot: {x: 0.8005996, y: 0.7999838}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9289530f3b59c0f4586b0669a9b69c57
+      internalID: 1643861109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 900
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2b7ce0e81c220439dd5c330449bf4d
+      internalID: 1319512035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle_Droplet
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 975
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfb145057492b14f837154e41548f47
+      internalID: 1958564374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blink1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 297
+        width: 117
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055072077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b811f7535c128c4590d8a6ba1fd6db5
+      internalID: 580288074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blink2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 297
+        width: 117
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.06421181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c31983a291de747bee16d2441de6d7
+      internalID: -745554412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blink4
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 297
+        width: 117
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5068756, y: 0.06793637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4379fc6185d5e4898bddf74ebe1155
+      internalID: 499247135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blink5
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 297
+        width: 117
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49656168, y: 0.067936935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd00390104344cb4e86709bb8f0172bb
+      internalID: -1409879103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blink3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 297
+        width: 116
+        height: 108
+      alignment: 9
+      pivot: {x: 0.4930641, y: 0.067936935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b7ab2252c8b9d4fb671a1d17c5d7e6
+      internalID: 1660805594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a7cb4e740d8f1c84d9009b48aada95b5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Blink1: 580288074
+      Blink2: -745554412
+      Blink3: 1660805594
+      Blink4: 499247135
+      Blink5: -1409879103
+      Circle_Droplet: 1958564374
+      Misc_SpriteSheet_0: -525059357494634272
+      Misc_SpriteSheet_1: -1123297390
+      Misc_SpriteSheet_2: 1063655215
+      Misc_SpriteSheet_3: -709617976
+      Misc_SpriteSheet_4: 1643861109
+      Misc_SpriteSheet_5: 1319512035
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,14 +4,14 @@ public class PlayerAnimation : MonoBehaviour
 {
     Rigidbody2D _rb;
     SpriteRenderer _sr;
-    Animator _animator;
+   [SerializeField] Animator _animator;
     PlayerMovement _playerMovement;
     
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _sr = GetComponent<SpriteRenderer>();
-        _animator = GetComponent<Animator>();
+        //_animator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
     }
     void Update()
