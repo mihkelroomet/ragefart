@@ -520,10 +520,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.2994792
-    y: 0.030555556
-    width: 0.33333334
-    height: 0.3333333
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -8289,6 +8289,34 @@ PrefabInstance:
     - target: {fileID: 3441482907411956581, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
       propertyPath: m_Name
       value: IGButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadRandomStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameState, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385737570004761322, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7435512120752946977, guid: 21b238fce82fa564d8900d552171b35c, type: 3}
       propertyPath: m_Pivot.x

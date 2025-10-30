@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameStartManager : MonoBehaviour
 {
@@ -7,6 +6,6 @@ public class GameStartManager : MonoBehaviour
 
     void Start()
     {
-        SceneManager.LoadScene(gameState.GetRandomStage());
+        gameState.LoadRandomStage();
     }
 }

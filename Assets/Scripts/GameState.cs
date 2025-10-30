@@ -10,8 +10,13 @@ public class GameState : ScriptableObject
     [SerializeField] string[] stagePool;
     public string[] StagePool => stagePool;
 
-    public string GetRandomStage()
+    string GetRandomStage()
     {
         return stagePool[Random.Range(0, stagePool.Length)];
+    }
+
+    public void LoadRandomStage()
+    {
+        SceneManager.LoadScene(GetRandomStage());
     }
 }
