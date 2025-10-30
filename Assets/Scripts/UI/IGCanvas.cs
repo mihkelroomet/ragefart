@@ -2,40 +2,25 @@ using UnityEngine;
 
 public class IGCanvas : MonoBehaviour
 {
-    [SerializeField] WinEvent winEvent;
-    [SerializeField] LoseEvent loseEvent;
+    [SerializeField] ShowRoundEndPanelEvent showRoundEndPanelEvent;
     
     [SerializeField] RoundEndPanel roundEndPanel;
     [SerializeField] RoundResultsPanel roundResultsPanel;
 
     void OnEnable()
     {
-        winEvent.OnEvent += OnWin;
-        loseEvent.OnEvent += OnLose;
+        showRoundEndPanelEvent.OnEvent += OnShowRoundEndPanel;
     }
 
     void OnDisable()
     {
-        winEvent.OnEvent -= OnWin;
-        loseEvent.OnEvent -= OnLose;
+        showRoundEndPanelEvent.OnEvent -= OnShowRoundEndPanel;
     }
 
-    void OnWin(Events.Win _)
+    void OnShowRoundEndPanel(Events.ShowRoundEndPanel _)
     {
-        roundEndPanel.OnWin();
+        roundEndPanel.OnShowRoundEndPanel();
         roundResultsPanel.gameObject.SetActive(false);
         roundEndPanel.gameObject.SetActive(true);
-    }
-
-    void OnLose(Events.Lose _)
-    {
-        roundEndPanel.OnLose();
-        roundResultsPanel.gameObject.SetActive(false);
-        roundEndPanel.gameObject.SetActive(true);
-    }
-
-    void OnAbandonButtonClicked()
-    {
-        
     }
 }

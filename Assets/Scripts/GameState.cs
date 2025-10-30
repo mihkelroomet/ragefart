@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameState : ScriptableObject
 {
     public bool gameIsRunning;
-    public bool[] roundResults;
+    public List<bool> roundResults;
+    [SerializeField] int totalRounds = 10;
+    public int TotalRounds => totalRounds;
     public int iteration;
     [SerializeField] string[] stagePool;
     public string[] StagePool => stagePool;

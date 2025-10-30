@@ -43,8 +43,10 @@ public class ToiletBrush : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // ReSharper disable once InvertIf
         if (gameState.gameIsRunning && other.CompareTag("Player"))
         {
+            Destroy(other.gameObject);
             loseEvent.Raise(new Events.Lose());
         }
     }

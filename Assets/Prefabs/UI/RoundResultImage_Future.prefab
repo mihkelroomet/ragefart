@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6015898101353053166}
   - component: {fileID: 8911299271719440489}
   m_Layer: 5
-  m_Name: RoundResultImage
+  m_Name: RoundResultImage_Future
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
