@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     
     ContactFilter2D _groundContactFilter;
     [SerializeField, Range(0, 89)] float maxGroundSlopeAngle = 80f;
+
+    [SerializeField] GameState gameState;
     
     void Start()
     {
@@ -67,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!gameState.gameIsRunning)
+        {
+            MoveInput = 0;
+            return;
+        }
+        
         MoveInput = _moveAction.ReadValue<float>();
 
         if (_jumpAction.WasReleasedThisFrame())
