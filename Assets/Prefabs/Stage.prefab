@@ -556,10 +556,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.2994792
-    y: 0.030555556
-    width: 0.33333334
-    height: 0.3333333
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3310,6 +3310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9ce533ae86d3244b6f71eec80c9311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundResultsPanel
+  gameState: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
+  roundResultImageFuture: {fileID: 9201307344263505263, guid: 2dd13f2a4e4ee5e46b3b396d3a6afcac, type: 3}
+  roundResultImageCurrent: {fileID: 8879444791882997510, guid: 8c21bf0a474347346b95851448932ac9, type: 3}
+  roundResultImageWon: {fileID: 4391048416015611073, guid: f824d71cde4af314ea9792b174170347, type: 3}
+  roundResultImageLost: {fileID: 7339273322599001650, guid: e50f3142cfe77324c958aaf4908bbb63, type: 3}
 --- !u!1 &7730160610853425544
 GameObject:
   m_ObjectHideFlags: 0
