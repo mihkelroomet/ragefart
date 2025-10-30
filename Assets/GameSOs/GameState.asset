@@ -15,3 +15,6 @@ MonoBehaviour:
   gameIsRunning: 0
   roundResults: 
   iteration: 0
+  stagePool:
+  - Stage0
+  - Stage1
