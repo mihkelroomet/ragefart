@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb3df0c7c0f8114d99d5ff8b65ae65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToiletBrush
+  playSFXEvent: {fileID: 11400000, guid: 62c4094385078b542af56492c2db6702, type: 2}
+  splatSound: {fileID: 11400000, guid: 563ee5aaf8241a04cb794b009bd5bb1d, type: 2}
   launchDelay: 0
   accel: 60
   maxSpeed: 12

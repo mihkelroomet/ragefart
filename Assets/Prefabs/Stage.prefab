@@ -4222,6 +4222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736460bc293e67c48a7ea6ce8b30e833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toilet
+  playSFXEvent: {fileID: 11400000, guid: 62c4094385078b542af56492c2db6702, type: 2}
+  splashSound: {fileID: 11400000, guid: d9a60bf5fdee0724993a845eb4025af6, type: 2}
   winEvent: {fileID: 11400000, guid: 58c931117caf7b04388936f17ec412da, type: 2}
   gameState: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
 --- !u!1 &9055656252497728065

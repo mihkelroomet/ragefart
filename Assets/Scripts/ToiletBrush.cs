@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class ToiletBrush : MonoBehaviour
 {
+    [SerializeField] PlaySFXEvent playSFXEvent;
+    [SerializeField] Sound splatSound;
+    
     [SerializeField] float launchDelay;
     [SerializeField] float accel = 60f;
     [SerializeField] float maxSpeed = 12f;
@@ -46,6 +49,7 @@ public class ToiletBrush : MonoBehaviour
         // ReSharper disable once InvertIf
         if (gameState.gameIsRunning && other.CompareTag("Player"))
         {
+            playSFXEvent.Raise(new Events.PlaySFX(splatSound));
             Destroy(other.gameObject);
             loseEvent.Raise(new Events.Lose());
         }
