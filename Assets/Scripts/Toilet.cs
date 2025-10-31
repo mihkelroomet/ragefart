@@ -10,14 +10,14 @@ public class Toilet : MonoBehaviour
     [SerializeField] GameState gameState;
     [SerializeField] Animator toiletAnimator;
     [SerializeField] GameObject playerObject;
-    [SerializeField] private float delay;
+    [SerializeField] float animStartToSplashDelay = 0.8f;
+    [SerializeField] float splashToWinDelay = 0.7f;
     
     void OnTriggerEnter2D(Collider2D other)
     {
         // ReSharper disable once InvertIf
         if (gameState.gameIsRunning && other.CompareTag("Player"))
         {
-            playSFXEvent.Raise(new Events.PlaySFX(splashSound));
             StartCoroutine(GameWinInitiated());
         }
     }
@@ -26,7 +26,9 @@ public class Toilet : MonoBehaviour
     {
         playerObject.SetActive(false);
         toiletAnimator.Play("ToiletFlush");
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(animStartToSplashDelay);
+        playSFXEvent.Raise(new Events.PlaySFX(splashSound));
+        yield return new WaitForSeconds(splashToWinDelay);
         winEvent.Raise(new Events.Win());
     }
     
