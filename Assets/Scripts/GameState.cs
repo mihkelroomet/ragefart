@@ -15,6 +15,12 @@ public class GameState : ScriptableObject
     [SerializeField] string[] stagePool;
     [SerializeField] string[] hintPool;
     public string[] HintPool => hintPool;
+    public string actionMap;
+
+    public void LoadControlsSelect()
+    {
+        SceneManager.LoadScene("ControlsSelect");
+    }
 
     string GetRandomStage()
     {
@@ -24,6 +30,11 @@ public class GameState : ScriptableObject
     public void LoadRandomStage()
     {
         SceneManager.LoadScene(GetRandomStage());
+    }
+
+    public void SwitchActionMap(string map)
+    {
+        actionMap = map;
     }
 
     public void Restart()

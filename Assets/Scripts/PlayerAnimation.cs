@@ -12,6 +12,8 @@ public class PlayerAnimation : MonoBehaviour
     PlayerMovement _playerMovement;
     
     InputAction _fartAction;
+
+    [SerializeField] GameState gameState;
     
     void Start()
     {
@@ -19,7 +21,7 @@ public class PlayerAnimation : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _playerMovement = GetComponent<PlayerMovement>();
 
-        _fartAction = InputSystem.actions.FindAction("Player/Fart");
+        _fartAction = InputSystem.actions.FindAction(gameState.actionMap + "/Fart");
     }
     void Update()
     {

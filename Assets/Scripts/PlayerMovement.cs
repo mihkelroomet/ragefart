@@ -66,8 +66,8 @@ public class PlayerMovement : MonoBehaviour
         
         ConfigGroundContactFilter();
 
-        _moveAction = InputSystem.actions.FindAction("Player/MoveX");
-        _jumpAction = InputSystem.actions.FindAction("Player/Jump");
+        _moveAction = InputSystem.actions.FindAction(gameState.actionMap + "/MoveX");
+        _jumpAction = InputSystem.actions.FindAction(gameState.actionMap + "/Jump");
     }
 
     void Update()
