@@ -12,14 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14891643b211e74397e6ce504464a48, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  gameIsRunning: 1
-  roundResults: 00000000000000000000
+  gameIsRunning: 0
+  roundResults: 0000000000000000000000000000000000000100000001
   minWinsToBeatGame: 6
   totalRounds: 10
-  iteration: 6
+  iteration: 0
   stagePool:
   - Stage0
   - Stage1
+  - Stage2
+  - Stage10
+  - Stage11
+  - Stage12
+  - Stage20
+  - Stage21
+  - Stage22
   hintPool:
   - You should fart more.
   - You really should fart more. Press down to fart.
