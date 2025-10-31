@@ -18,18 +18,18 @@ public class Toilet : MonoBehaviour
         // ReSharper disable once InvertIf
         if (gameState.gameIsRunning && other.CompareTag("Player"))
         {
+            playerObject.SetActive(false);
+            winEvent.Raise(new Events.Win());
             StartCoroutine(GameWinInitiated());
         }
     }
 
     IEnumerator GameWinInitiated()
     {
-        playerObject.SetActive(false);
         toiletAnimator.Play("ToiletFlush");
         yield return new WaitForSeconds(animStartToSplashDelay);
         playSFXEvent.Raise(new Events.PlaySFX(splashSound));
         yield return new WaitForSeconds(splashToWinDelay);
-        winEvent.Raise(new Events.Win());
     }
     
 }

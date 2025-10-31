@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14891643b211e74397e6ce504464a48, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  gameIsRunning: 0
-  roundResults: 0000000000000000000000000000000000000100000001
+  gameIsRunning: 1
+  roundResults: 0000010000010101
   minWinsToBeatGame: 6
   totalRounds: 10
-  iteration: 0
+  iteration: 3
   stagePool:
   - Stage0
   - Stage1
@@ -38,3 +38,4 @@ MonoBehaviour:
     down to fart.
   - Each round has a fart profile. The types of farts you hear indicate what obstacles
     you are going to face. Press down to fart.
+  actionMap: Player

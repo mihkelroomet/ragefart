@@ -40,6 +40,7 @@ public class RoundEndPanel : MonoBehaviour
         // Adding new ones
         foreach (bool roundResult in gameState.roundResults)
         {
+            // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
             if (roundResult)
             {
                 Instantiate(roundResultImageWon, roundResultImages);
@@ -60,7 +61,7 @@ public class RoundEndPanel : MonoBehaviour
     {
         if (gameState.roundResults.Count >= gameState.TotalRounds)
         {
-            advanceButton.onClick.RemoveAllListeners();
+            advanceButton.onClick = new Button.ButtonClickedEvent();
             advanceButton.onClick.AddListener(GameState.LoadEndScreen);
         }
     }

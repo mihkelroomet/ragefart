@@ -9,7 +9,8 @@ public class RoundManager : MonoBehaviour
     
     [SerializeField] GameState gameState;
 
-    [SerializeField] float showRoundEndPanelDelay = 0.8f;
+    [SerializeField] float showRoundEndPanelDelayOnWin = 2.3f;
+    [SerializeField] float showRoundEndPanelDelayOnLoss = 0.8f;
 
     void Awake()
     {
@@ -32,19 +33,19 @@ public class RoundManager : MonoBehaviour
     {
         gameState.gameIsRunning = false;
         gameState.roundResults.Add(true);
-        StartCoroutine(RaiseShowRoundEndPanelCoroutine());
+        StartCoroutine(RaiseShowRoundEndPanelCoroutine(showRoundEndPanelDelayOnWin));
     }
 
     void OnLose(Events.Lose _)
     {
         gameState.gameIsRunning = false;
         gameState.roundResults.Add(false);
-        StartCoroutine(RaiseShowRoundEndPanelCoroutine());
+        StartCoroutine(RaiseShowRoundEndPanelCoroutine(showRoundEndPanelDelayOnLoss));
     }
 
-    IEnumerator RaiseShowRoundEndPanelCoroutine()
+    IEnumerator RaiseShowRoundEndPanelCoroutine(float delay)
     {
-        yield return new WaitForSeconds(showRoundEndPanelDelay);
+        yield return new WaitForSeconds(delay);
         showRoundEndPanelEvent.Raise(new Events.ShowRoundEndPanel());
     }
 }

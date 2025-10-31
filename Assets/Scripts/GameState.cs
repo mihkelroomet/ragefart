@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,7 @@ public class GameState : ScriptableObject
 
     public void LoadControlsSelect()
     {
-        SceneManager.LoadScene("ControlsSelect");
+        SceneFader.I.LoadScene("ControlsSelect");
     }
 
     string GetRandomStage()
@@ -29,7 +30,7 @@ public class GameState : ScriptableObject
 
     public void LoadRandomStage()
     {
-        SceneManager.LoadScene(GetRandomStage());
+        SceneFader.I.LoadScene(GetRandomStage());
     }
 
     public void SwitchActionMap(string map)
@@ -57,6 +58,6 @@ public class GameState : ScriptableObject
 
     public static void LoadEndScreen()
     {
-        SceneManager.LoadScene("EndScreen");
+        SceneFader.I.LoadScene("EndScreen");
     }
 }

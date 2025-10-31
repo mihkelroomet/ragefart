@@ -48,7 +48,8 @@ MonoBehaviour:
   loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
   showRoundEndPanelEvent: {fileID: 11400000, guid: 246364bd294a3be499392a622ca29bba, type: 2}
   gameState: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
-  showRoundEndPanelDelay: 0.8
+  showRoundEndPanelDelayOnWin: 2.3
+  showRoundEndPanelDelayOnLoss: 1.2
 --- !u!1 &2469134114799061216
 GameObject:
   m_ObjectHideFlags: 0
