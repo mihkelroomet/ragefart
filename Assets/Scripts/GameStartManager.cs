@@ -9,6 +9,5 @@ public class GameStartManager : MonoBehaviour
         gameState.gameIsRunning = false;
         gameState.roundResults.Clear();
         gameState.iteration = 0;
-        gameState.LoadRandomStage();
     }
 }
