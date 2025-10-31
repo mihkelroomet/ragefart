@@ -8,9 +8,14 @@ public class GameActions : ScriptableObject
     #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
     #elif UNITY_WEBGL
-        JS_Quit();
+        WebGL_Quit();
     #else
         Application.Quit();
     #endif
+    }
+    
+    public void WebGL_Quit()
+    {
+        SceneFader.I.LoadScene("StartHere");
     }
 }
