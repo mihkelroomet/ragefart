@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Choose
   m_EditorClassIdentifier: Assembly-CSharp::Sound
   clip: {fileID: 8300000, guid: 29f7cc890fd547e46905d21e6d0d9b49, type: 3}
-  output: {fileID: 4697813162937326293, guid: 827c29ce8f7118d438e858042d4b580c, type: 2}
+  output: {fileID: 4170525033943753565, guid: 827c29ce8f7118d438e858042d4b580c, type: 2}

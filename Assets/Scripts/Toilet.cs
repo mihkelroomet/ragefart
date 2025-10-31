@@ -10,8 +10,8 @@ public class Toilet : MonoBehaviour
     [SerializeField] GameState gameState;
     [SerializeField] Animator toiletAnimator;
     [SerializeField] GameObject playerObject;
-    [SerializeField] float animStartToSplashDelay = 0.8f;
-    [SerializeField] float splashToWinDelay = 0.7f;
+    [SerializeField] float animStartToSplashDelay = 1.0f;
+    [SerializeField] float splashToWinDelay = 0.5f;
     
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -9,13 +9,4 @@ public class ToiletFlush : MonoBehaviour
     {
         flushEffect.Emit(Random.Range(10, 20));
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            flushToilet.Play("ToiletFlush", -1, 0);
-
-        }
-    }
 }

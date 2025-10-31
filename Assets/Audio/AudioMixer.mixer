@@ -34,6 +34,8 @@ AudioMixerController:
     name: MusicVol
   - guid: 73c97454b508dfb468aa71cc62b86efb
     name: SFXVol
+  - guid: 1db69c4493af809458fe060a980eed09
+    name: UISFXVol
   m_AudioMixerGroupViews:
   - guids:
     - 229a87316afa4c74fa1a032b4f1cde27
@@ -88,7 +90,8 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: c4168514bad65fe4b8834c899f589945
-  m_FloatValues: {}
+  m_FloatValues:
+    1db69c4493af809458fe060a980eed09: -7
   m_TransitionOverrides: {}
 --- !u!243 &3565202325470483999
 AudioMixerGroupController:
