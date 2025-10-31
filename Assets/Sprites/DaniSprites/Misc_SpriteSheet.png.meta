@@ -363,6 +363,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 8
+        width: 160
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e496fba087f0fc645b75b07a237a6524
+      internalID: -1287348459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misc_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 164
+        width: 120
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c03bdf9688e694894c33173025cf58
+      internalID: -852949873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -391,6 +435,8 @@ TextureImporter:
       Misc_SpriteSheet_3: -709617976
       Misc_SpriteSheet_4: 1643861109
       Misc_SpriteSheet_5: 1319512035
+      Misc_SpriteSheet_6: -1287348459
+      Misc_SpriteSheet_7: -852949873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
