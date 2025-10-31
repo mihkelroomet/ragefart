@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] PlaySFXEvent playSFXEvent;
+    [SerializeField] Sound jumpSound;
+    
     [SerializeField] float maxSpeed = 9f;
     [SerializeField] float groundAccel = 60f;
     [SerializeField] float airAccel = 30f;
@@ -187,6 +190,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
+        playSFXEvent.Raise(new Events.PlaySFX(jumpSound));
         _rb.linearVelocityY = jumpForce;
         _canJump = false;
     }

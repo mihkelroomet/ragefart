@@ -556,10 +556,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.2994792
+    y: 0.030555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1024,6 +1024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bca4e66d0dc684497ffe726afe7c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  playSFXEvent: {fileID: 11400000, guid: 62c4094385078b542af56492c2db6702, type: 2}
+  jumpSound: {fileID: 11400000, guid: 85e4c6fc1fdc6ad43907197c9c1cfc75, type: 2}
   maxSpeed: 9
   groundAccel: 60
   airAccel: 30
