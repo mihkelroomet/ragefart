@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df17e38c063a604d82df9b7e310b134, type: 3}
   m_Name: Fart5
   m_EditorClassIdentifier: Assembly-CSharp::Sound
-  clip: {fileID: 8300000, guid: 1551323e4f16889439313544de541796, type: 3}
+  clip: {fileID: 8300000, guid: c9211fa2475565b45ab4ca314c088c92, type: 3}
   output: {fileID: 4697813162937326293, guid: 827c29ce8f7118d438e858042d4b580c, type: 2}

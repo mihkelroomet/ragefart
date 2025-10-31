@@ -788,6 +788,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db9c0808e9c02484f874ebb80495bc56, type: 2}
   - {fileID: 11400000, guid: 20f25d80664649449a747c35b5464ac9, type: 2}
   - {fileID: 11400000, guid: 37928b0758b87ed4e928bcbd69311f58, type: 2}
+  - {fileID: 11400000, guid: 0a397f7da2597344f9f7f7506381061f, type: 2}
   animator: {fileID: 3841992129886637119}
   gameState: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
 --- !u!1 &5216647768184127435
