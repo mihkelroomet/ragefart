@@ -629,6 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736460bc293e67c48a7ea6ce8b30e833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Toilet
+  winEvent: {fileID: 0}
 --- !u!1 &181226763
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b14b4fc8b772014fa55f96a0b0dc7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
-  _animator: {fileID: 269089371}
+  animator: {fileID: 269089371}
 --- !u!61 &181226771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1064,10 +1065,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.15276273
+    y: 0.1069869
+    width: 0.6933911
+    height: 0.78602624
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

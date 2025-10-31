@@ -5,9 +5,42 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StageTemplate.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/StartHere.unity
+    guid: 49dbbca78e6861148a194100103dfe64
+  - enabled: 1
+    path: Assets/Scenes/Stage1.unity
+    guid: a357d0d6b5b6e544194cf72e224f5e35
+  - enabled: 1
+    path: Assets/Scenes/Stage12.unity
+    guid: e671317087c1e8c459bd342e0285ab7e
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 32f38d14d4686e245ab0c5a76618f989
+  - enabled: 1
+    path: Assets/Scenes/Stage22.unity
+    guid: bda21340a40756c44b43816a9a4be4dc
+  - enabled: 1
+    path: Assets/Scenes/Stage0.unity
+    guid: 9bffc93895064534ebef3d11eccc8b9d
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 666a4f8bce5d2934091388e885a1b493
+  - enabled: 1
+    path: Assets/Scenes/Stage10.unity
+    guid: 3b00a401d6f80b14ea52ea8487a591d1
+  - enabled: 1
+    path: Assets/Scenes/Stage11.unity
+    guid: 36a6a6116143b2e4abd8963e83c24c2a
+  - enabled: 1
+    path: Assets/Scenes/Stage21.unity
+    guid: 2bd3802145d35fd4b83faf15885d8c3d
+  - enabled: 1
+    path: Assets/Scenes/Stage20.unity
+    guid: 967bfbdd271c9ff4b9d7910c765c0ac8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

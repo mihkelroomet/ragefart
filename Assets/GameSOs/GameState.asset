@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14891643b211e74397e6ce504464a48, type: 3}
+  m_Name: GameState
+  m_EditorClassIdentifier: Assembly-CSharp::GameState
+  gameIsRunning: 0
+  roundResults: 0000000000000000000000000000000000000100000001
+  minWinsToBeatGame: 6
+  totalRounds: 10
+  iteration: 0
+  stagePool:
+  - Stage0
+  - Stage1
+  - Stage2
+  - Stage10
+  - Stage11
+  - Stage12
+  - Stage20
+  - Stage21
+  - Stage22
+  hintPool:
+  - You should fart more.
+  - You really should fart more. Press down to fart.
+  - Farting is the key to success in this game. Keep at it.
+  - Are farts the same each time?
+  - Have you learned the fart profiles yet?
+  - In case you're still lost, here's what you should do. Each round has a fart profile.
+    The types of farts you hear indicate what obstacles you are going to face. Press
+    down to fart.
+  - Each round has a fart profile. The types of farts you hear indicate what obstacles
+    you are going to face. Press down to fart.

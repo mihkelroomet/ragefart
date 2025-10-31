@@ -1,25 +1,34 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    [SerializeField] PlaySFXEvent playSFXEvent;
+    [SerializeField] Sound[] fartPool;
+    
     Rigidbody2D _rb;
     SpriteRenderer _sr;
-   [SerializeField] Animator _animator;
+    [SerializeField] Animator animator;
     PlayerMovement _playerMovement;
+    
+    InputAction _fartAction;
     
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _sr = GetComponent<SpriteRenderer>();
-        //_animator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
+
+        _fartAction = InputSystem.actions.FindAction("Player/Fart");
     }
     void Update()
     {
-        SetAnimation(_playerMovement.MoveInput);
+        bool isFarting = _fartAction.IsPressed();
+        if (_fartAction.WasPressedThisFrame()) PlayFartSound();
+        SetAnimation(_playerMovement.MoveInput, isFarting);
     }
 
-    void SetAnimation(float moveInput)
+    void SetAnimation(float moveInput, bool isFarting)
     {
         if (moveInput != 0)
         {
@@ -27,8 +36,12 @@ public class PlayerAnimation : MonoBehaviour
         }
         
         string animationName;
-        
-        if (_playerMovement.IsOnGround)
+
+        if (isFarting)
+        {
+            animationName = "Player_Fart";
+        }
+        else if (_playerMovement.IsOnGround)
         {
             animationName = moveInput == 0 ? "Player_Idle" : "Player_Run";
         }
@@ -37,6 +50,14 @@ public class PlayerAnimation : MonoBehaviour
             animationName = _rb.linearVelocityY > 0 ? "Player_Jump" : "Player_Fall";
         }
         
-        _animator.Play(animationName);
+        animator.Play(animationName);
+    }
+
+    void PlayFartSound()
+    {
+        // getting random sound from pool
+        Sound fartSound = fartPool[Random.Range(0, fartPool.Length)];
+        
+        playSFXEvent.Raise(new Events.PlaySFX(fartSound));
     }
 }
