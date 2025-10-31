@@ -15,10 +15,13 @@ public class RoundEndPanel : MonoBehaviour
     [SerializeField] Transform roundResultImageWon;
     [SerializeField] Transform roundResultImageLost;
 
+    [SerializeField] Button advanceButton;
+
     public void OnShowRoundEndPanel()
     {
         UpdateTitleImage();
         UpdateRoundResultImages();
+        UpdateAdvanceButtonFunc();
     }
 
     void UpdateTitleImage()
@@ -50,6 +53,15 @@ public class RoundEndPanel : MonoBehaviour
         for (int i = gameState.roundResults.Count; i < gameState.TotalRounds; i++)
         {
             Instantiate(roundResultImageFuture, roundResultImages);
+        }
+    }
+
+    void UpdateAdvanceButtonFunc()
+    {
+        if (gameState.roundResults.Count >= gameState.TotalRounds)
+        {
+            advanceButton.onClick.RemoveAllListeners();
+            advanceButton.onClick.AddListener(GameState.LoadEndScreen);
         }
     }
 }

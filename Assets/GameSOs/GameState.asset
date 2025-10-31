@@ -12,9 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14891643b211e74397e6ce504464a48, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  gameIsRunning: 0
-  roundResults: 
-  iteration: 0
+  gameIsRunning: 1
+  roundResults: 00000000000000000000
+  minWinsToBeatGame: 6
+  totalRounds: 10
+  iteration: 6
   stagePool:
   - Stage0
   - Stage1
+  hintPool:
+  - You should fart more.
+  - You really should fart more. Press down to fart.
+  - Farting is the key to success in this game. Keep at it.
+  - Are farts the same each time?
+  - Have you learned the fart profiles yet?
+  - In case you're still lost, here's what you should do. Each round has a fart profile.
+    The types of farts you hear indicate what obstacles you are going to face. Press
+    down to fart.
+  - Each round has a fart profile. The types of farts you hear indicate what obstacles
+    you are going to face. Press down to fart.
