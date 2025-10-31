@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: launchDelay
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: fartPool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: 'fartPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 37928b0758b87ed4e928bcbd69311f58, type: 2}
     - target: {fileID: 2066657170689153577, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5

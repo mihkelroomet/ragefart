@@ -131,6 +131,22 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: fartPool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: 'fartPool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 20f25d80664649449a747c35b5464ac9, type: 2}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: 'fartPool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 37928b0758b87ed4e928bcbd69311f58, type: 2}
+    - target: {fileID: 1499422960809531906, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
+      propertyPath: 'fartPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 37928b0758b87ed4e928bcbd69311f58, type: 2}
     - target: {fileID: 2066657170689153577, guid: a775225a17efcc64291e3a50fd0bcd36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5

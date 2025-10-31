@@ -1054,6 +1054,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b14b4fc8b772014fa55f96a0b0dc7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  playSFXEvent: {fileID: 11400000, guid: 62c4094385078b542af56492c2db6702, type: 2}
+  fartPool:
+  - {fileID: 11400000, guid: 0dc66871cb36af14eb73dbc43347c580, type: 2}
+  - {fileID: 11400000, guid: db9c0808e9c02484f874ebb80495bc56, type: 2}
+  - {fileID: 11400000, guid: 20f25d80664649449a747c35b5464ac9, type: 2}
+  - {fileID: 11400000, guid: 37928b0758b87ed4e928bcbd69311f58, type: 2}
   animator: {fileID: 5926740290349687143}
 --- !u!1 &5216647768184127435
 GameObject:

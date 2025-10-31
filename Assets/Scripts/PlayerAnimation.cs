@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    [SerializeField] PlaySFXEvent playSFXEvent;
+    [SerializeField] Sound[] fartPool;
+    
     Rigidbody2D _rb;
     SpriteRenderer _sr;
     [SerializeField] Animator animator;
@@ -21,6 +24,7 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         bool isFarting = _fartAction.IsPressed();
+        if (_fartAction.WasPressedThisFrame()) PlayFartSound();
         SetAnimation(_playerMovement.MoveInput, isFarting);
     }
 
@@ -47,5 +51,13 @@ public class PlayerAnimation : MonoBehaviour
         }
         
         animator.Play(animationName);
+    }
+
+    void PlayFartSound()
+    {
+        // getting random sound from pool
+        Sound fartSound = fartPool[Random.Range(0, fartPool.Length)];
+        
+        playSFXEvent.Raise(new Events.PlaySFX(fartSound));
     }
 }
