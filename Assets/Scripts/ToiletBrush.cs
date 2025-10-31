@@ -21,6 +21,8 @@ public class ToiletBrush : MonoBehaviour
     [SerializeField] GameState gameState;
     
     Rigidbody2D _rb;
+    
+    [SerializeField] ParticleSystem poopParticles;
 
     void Start()
     {
@@ -50,6 +52,7 @@ public class ToiletBrush : MonoBehaviour
         if (gameState.gameIsRunning && other.CompareTag("Player"))
         {
             playSFXEvent.Raise(new Events.PlaySFX(splatSound));
+            Instantiate(poopParticles, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             loseEvent.Raise(new Events.Lose());
         }

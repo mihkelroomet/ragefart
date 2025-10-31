@@ -177,6 +177,7 @@ MonoBehaviour:
   target: {fileID: 7343740036704445007}
   loseEvent: {fileID: 11400000, guid: 5ec99e39dc978d44d9650f7408d124d2, type: 2}
   gameState: {fileID: 11400000, guid: 17937bcab1d3be2489cd691d6f325b99, type: 2}
+  poopParticles: {fileID: 3507428277807824947, guid: e6b70f9bc8068334c8908b1d1b8277ee, type: 3}
 --- !u!70 &5584725443301742975
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
